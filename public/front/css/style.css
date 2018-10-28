@@ -1,0 +1,15 @@
+.img-bg{
+    height: 650px;
+    width: 1000px;
+    background-size: cover;
+}
+
+.img-bg2{
+    height: 650px;
+    width: 100%;
+    background-size: cover;
+}
+
+.login-font{
+    font: regular 22px "Open Sans";
+}
