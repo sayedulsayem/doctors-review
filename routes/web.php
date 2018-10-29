@@ -11,10 +11,12 @@
 |
 */
 
+Auth::routes();
+
 Route::get('/', 'WelcomeController@login');
 
 Route::get('/register','WelcomeController@register');
 
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
