@@ -11,12 +11,46 @@
 |
 */
 
-Auth::routes();
 
-Route::get('/', 'WelcomeController@login');
+Route::get('/home',[
+    'uses' => 'SignUpController@home',
+    'as'   => 'home'
+]);
 
-Route::get('/register','WelcomeController@register');
+Route::get('/',[
+   'uses' => 'SignUpController@login',
+   'as'   => '/'
+]);
+
+Route::post('/visitor-sign-in',[
+   'uses' => 'SignUpController@visitorSignIn',
+   'as'   => 'visitor-sign-in'
+]);
+
+Route::get('/sign-up',[
+   'uses' => 'SignUpController@register',
+   'as'   => 'sign-up'
+]);
+
+Route::post('/new-visitor',[
+   'uses' => 'SignUpController@newVisitor',
+   'as'   => 'new-visitor'
+]);
+
+Route::post('/visitor-logout',[
+   'uses' => 'SignUpController@visitorLogout',
+   'as'   => 'visitor-logout'
+]);
+
+Route::get('/forget-password',[
+   'uses' => 'SignUpController@forgetPassword',
+   'as'   => 'forget-password'
+]);
+
+Route::get('/profile','ProjectController@getUserData');
 
 
-
-Route::get('/home', 'HomeController@index')->name('home');
+//
+//Auth::routes();
+//
+//Route::get('/home', 'HomeController@index')->name('home');
