@@ -7,6 +7,8 @@
 
     <title>Doctors Review</title>
 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
@@ -46,7 +48,7 @@
         }
 
         .title {
-            font-size: 84px;
+            font-size: 50px;
         }
 
         .links > a {
@@ -86,18 +88,36 @@
             <a href="{{ url('/') }}">home</a>
             <a href="{{ url('/patients') }}">patients</a>
             <a href="{{ url('/doctors') }}">doctors</a>
-            <a href="{{ url('/sign-up') }}m">sign up</a>
+            <a href="{{ url('/sign-up') }}">sign up</a>
             <a href="{{ url('/login') }}">login</a>
+            <div class="w3-dropdown-click">
+                <button onclick="myFunction()" class="w3-button">Profile</button>
+                <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+                    <a href="#" class="w3-bar-item w3-button">dashboard</a>
+                    <a href="#" class="w3-bar-item w3-button">logout</a>
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <a href="{{ url('/patients/sign-up') }}">Patients Sign Up</a>
+                <a href="{{ url('/patients/sign-up') }}">I am a Patients</a>
             </div>
             <div class="col-md-6">
-                <a href="{{ url('/doctors/sign-up') }}">Doctors Sign Up</a>
+                <a href="{{ url('doctors/sign-up') }}">I am a Doctor</a>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("Demo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
 </body>
 </html>

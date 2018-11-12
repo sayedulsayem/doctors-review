@@ -22,14 +22,13 @@ Route::get('/',[
    'as'   => '/'
 ]);
 
-Route::get('/sign-up',[
-    'uses' => 'SignUpController@showSignUpPage',
-    'as'   => 'sign-up'
-]);
+Route::get('sign-up','SignUpController@showSignUpPage');
 
-Route::get('/patients','Doctors\DoctorsController@home');
+Route::get('/patients','Patients\PatientsController@home');
+Route::get('/patients/sign-up','Patients\PatientsController@signUp');
 
-Route::get('/doctors','Patients\PatientsController@home');
+Route::get('/doctors','Doctors\DoctorsController@home');
+Route::get('/doctors/sign-up','Doctors\DoctorsController@signUp');
 
 Route::post('/visitor-sign-in',[
    'uses' => 'SignUpController@visitorSignIn',

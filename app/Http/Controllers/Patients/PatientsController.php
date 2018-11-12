@@ -11,4 +11,8 @@ class PatientsController extends Controller
     public function home(){
         return view('front.patients.welcome_patients');
     }
+
+    public function signUp(){
+        return view('front.patients.sign-up');
+    }
 }

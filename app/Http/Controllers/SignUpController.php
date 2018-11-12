@@ -13,7 +13,7 @@ class SignUpController extends Controller
     }
 
     public function showSignUpPage(){
-        return view('sign-up');
+        return view('front.sign-up');
     }
 
     public function forgetPassword(){

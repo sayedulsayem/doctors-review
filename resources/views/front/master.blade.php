@@ -13,6 +13,7 @@
 <body>
 
 @yield('body')
+
 <script src="{{ asset('/') }}front/assets/js/jquery.min.js"></script>
 <script src="{{ asset('/') }}front/assets/js/popper.min.js"></script>
 <script src="{{ asset('/') }}front/assets/js/bootstrap.min.js"></script>
