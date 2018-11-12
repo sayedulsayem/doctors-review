@@ -22,6 +22,7 @@ class Patients extends Model
         $patient->password = bcrypt($request->password);
         $patient->save();
 
+        Session::start();
         Session::put('visitorId', $patient->id);
         Session::put('visitorName', $patient->name);
         Session::put('visitorNid', $patient->nid);

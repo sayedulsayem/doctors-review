@@ -30,14 +30,9 @@
                                 <button id="submit" type="submit" class="btn bg-success" value="Register">Register</button>
                             </div>
                         </form>
-                        <div class="other-links">
-                            <div class="text">Or register with</div>
-                            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i>Facebook</a>
-                            <a href="https://www.google.com/"><i class="fab fa-google"></i>Google</a>
-                            <a href="https://bd.linkedin.com/"><i class="fab fa-linkedin-in"></i>Linkedin</a>
-                        </div>
+
                         <div class="page-links">
-                            <a href="{{ route('/') }}">Login to account</a>
+                            <a href="{{ url('/login') }}">Login to account</a>
                         </div>
                     </div>
                 </div>

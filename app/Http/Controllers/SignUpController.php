@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class SignUpController extends Controller
 {
     public function login(){
-        return view('welcome');
+        return view('front.login');
     }
 
     public function showSignUpPage(){
@@ -32,26 +32,29 @@ class SignUpController extends Controller
     }
 
     public function visitorLogout(Request $request){
-        Session::forget('visitorId');
-        Session::forget('visitorName');
+        return "logout";
+//        Session::flush();
+//        Session::forget('visitorId');
+//        Session::forget('visitorName');
 
-        return redirect('/');
+        return redirect('/login');
     }
 
     public function visitorSignIn(Request $request){
         $visitor = Patients::where('email', $request->email)->first();
+        return "login";
 
         if($visitor){
             if(password_verify($request->password, $visitor->password)){
                 Session::put('visitorId', $visitor->id);
                 Session::put('visitorName', $visitor->name);
 
-                return redirect('/profile');
+                return redirect('/clients');
             }else{
-                return redirect('/')->with('message', 'Password not valid');
+                return redirect('/login')->with('message', 'Password not valid');
             }
         }else{
-            return redirect('/')->with('message', 'Email address not valid');
+            return redirect('/login')->with('message', 'Email address not valid');
         }
     }
 }

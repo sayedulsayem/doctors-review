@@ -94,7 +94,7 @@
                 <button onclick="myFunction()" class="w3-button">Profile</button>
                 <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
                     <a href="#" class="w3-bar-item w3-button">dashboard</a>
-                    <a href="#" class="w3-bar-item w3-button">logout</a>
+                    <a href="{{ url('/visitor-logout') }}" class="w3-bar-item w3-button">logout</a>
                 </div>
             </div>
         </div>
