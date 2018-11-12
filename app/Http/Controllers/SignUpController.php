@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Visitor;
+use App\Patients;
 use Session;
 use Illuminate\Http\Request;
 
@@ -22,13 +22,13 @@ class SignUpController extends Controller
 
     public function home(){
         return view('front.home.home',[
-            'visitor' => Visitor::all(),
+            'visitor' => Patients::all(),
         ]);
     }
 
     public function newVisitor(Request $request){
-        Visitor::saveVisitorInfo($request);
-        return redirect('/profile');
+        Patients::savePatientInfo($request);
+        return redirect('/patients');
     }
 
     public function visitorLogout(Request $request){
@@ -39,7 +39,7 @@ class SignUpController extends Controller
     }
 
     public function visitorSignIn(Request $request){
-        $visitor = Visitor::where('email', $request->email)->first();
+        $visitor = Patients::where('email', $request->email)->first();
 
         if($visitor){
             if(password_verify($request->password, $visitor->password)){
