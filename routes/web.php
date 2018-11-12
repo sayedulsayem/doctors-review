@@ -13,24 +13,30 @@
 
 
 Route::get('/home',[
-    'uses' => 'SignUpController@home',
+    'uses' => 'WelcomeController@home',
     'as'   => 'home'
 ]);
 
 Route::get('/',[
-   'uses' => 'SignUpController@login',
+   'uses' => 'WelcomeController@home',
    'as'   => '/'
 ]);
+
+Route::get('/sign-up',[
+    'uses' => 'SignUpController@showSignUpPage',
+    'as'   => 'sign-up'
+]);
+
+Route::get('/patients','Doctors\DoctorsController@home');
+
+Route::get('/doctors','Patients\PatientsController@home');
 
 Route::post('/visitor-sign-in',[
    'uses' => 'SignUpController@visitorSignIn',
    'as'   => 'visitor-sign-in'
 ]);
 
-Route::get('/sign-up',[
-   'uses' => 'SignUpController@register',
-   'as'   => 'sign-up'
-]);
+
 
 Route::post('/new-visitor',[
    'uses' => 'SignUpController@newVisitor',

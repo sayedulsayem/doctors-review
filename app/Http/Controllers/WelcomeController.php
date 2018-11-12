@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
-    function login(){
-        return view('front.login');
+    function home(){
+        return view('index');
     }
     function register(){
         return view('front.register');

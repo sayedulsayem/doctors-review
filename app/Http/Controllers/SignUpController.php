@@ -9,11 +9,11 @@ use Illuminate\Http\Request;
 class SignUpController extends Controller
 {
     public function login(){
-        return view('front.home.login');
+        return view('welcome');
     }
 
-    public function register(){
-        return view('front.home.register');
+    public function showSignUpPage(){
+        return view('sign-up');
     }
 
     public function forgetPassword(){
