@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Nov 14, 2018 at 01:25 PM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.11
+-- Host: 127.0.0.1
+-- Generation Time: Nov 14, 2018 at 02:11 PM
+-- Server version: 10.1.29-MariaDB
+-- PHP Version: 7.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -31,6 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `doctors` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(11) NOT NULL,
+  `nid` double NOT NULL,
   `fathers_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `mothers_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `date_of_birth` date NOT NULL,
@@ -121,6 +122,7 @@ CREATE TABLE `password_resets` (
 CREATE TABLE `patients` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(11) NOT NULL,
+  `nid` double NOT NULL,
   `date_of_birth` date NOT NULL,
   `mobile` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `house_no` int(11) NOT NULL,
@@ -158,7 +160,6 @@ CREATE TABLE `superadmins` (
 CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nid` double NOT NULL,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` int(11) NOT NULL,
@@ -219,7 +220,6 @@ ALTER TABLE `superadmins`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `users_nid_unique` (`nid`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
