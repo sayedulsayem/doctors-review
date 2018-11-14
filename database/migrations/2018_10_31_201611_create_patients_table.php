@@ -16,7 +16,7 @@ class CreatePatientsTable extends Migration
         Schema::create('patients', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->double('nid');
+            $table->double('nid')->unique();
             $table->date('date_of_birth');
             $table->string('mobile');
             $table->integer('house_no');

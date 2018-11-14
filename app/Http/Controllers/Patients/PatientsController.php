@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Patients;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\User;
+use Session;
 
 class PatientsController extends Controller
 {
@@ -14,5 +16,23 @@ class PatientsController extends Controller
 
     public function signUp(){
         return view('front.patients.sign-up');
+    }
+
+    public function newSignUp(Request $request){
+
+        $data=new User();
+
+        $data->name=$request->name;
+        $data->email=$request->email;
+        $data->password=$request->password;
+        $data->type=2;
+        $data->save();
+
+        Session::put('id',$data->id);
+        Session::put('name',$data->name);
+        Session::put('email',$data->email);
+        Session::put('type',2);
+
+        return redirect('/patients')->with('msg','Registration has been successfully.');
     }
 }

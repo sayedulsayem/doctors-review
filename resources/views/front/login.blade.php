@@ -20,7 +20,7 @@
                     <div class="form-items">
                         <h3 class="login-font text-center text-success">Login</h3>
                         <hr/>
-                        <form action="{{ route('visitor-sign-in') }}" method="post">
+                        <form action="{{ url('login-verify') }}" method="post">
                             <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
                             <input class="form-control" type="password" name="password" placeholder="Password" required>
                             <a href="forget_password.html" class="">forgot password</a>

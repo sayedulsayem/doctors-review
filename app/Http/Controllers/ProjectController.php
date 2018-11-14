@@ -12,12 +12,5 @@ class ProjectController extends Controller
 //        return view('front.home.profile');
 //    }
 
-    public function getUserData(){
-        $id=session::get('visitorId');
 
-        $userInfo= Patient::find($id);
-        return view('front.home.profile',[
-            'userInfo' => $userInfo
-        ]);
-    }
 }
