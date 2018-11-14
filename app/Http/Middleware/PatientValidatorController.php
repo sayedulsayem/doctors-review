@@ -16,7 +16,7 @@ class PatientValidatorController
      */
     public function handle($request, Closure $next)
     {
-        if (Session::has('id') && Session::has('type')==2){
+        if (Session::has('id') && (Session::has('type')==2)){
             return $next($request);
         }
         else{

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Doctors | Dashboard</title>
+    <title>Patients | Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -37,7 +37,7 @@
     <header class="main-header">
 
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="{{ url('/patients') }}" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>A</b>LT</span>
             <!-- logo for regular state and mobile devices -->
@@ -339,7 +339,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                        <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+                        <li class="active"><a href="{{ url('/patients') }}"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
                     </ul>
                 </li>
                 <li class="treeview">

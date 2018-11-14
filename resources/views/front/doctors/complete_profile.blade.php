@@ -1,7 +1,7 @@
 @extends('front.doctors.master')
 @section('body')
     <div class="content-wraper">
-        <h4 class="text-success text-center">{{ Session::get('msg') }}</h4>
+        <h4 class="text-success text-center"><?php $msg=Session::get('msg'); if ($msg){ echo $msg;} ?></h4>
         <section class="content-header">
             <h1>
                 Dashboard
