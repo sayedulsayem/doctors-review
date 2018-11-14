@@ -1,10 +1,9 @@
 @extends('front.doctors.master')
 @section('body')
 
-    <h4 class="text-success text-center">{{ Session::get('msg') }}</h4>
-
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+        <h4 class="text-success text-center">{{ Session::get('msg') }}</h4>
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>

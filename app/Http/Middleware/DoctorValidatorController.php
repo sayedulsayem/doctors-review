@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Session;
 
-class SuperAdminController
+class DoctorValidatorController
 {
     /**
      * Handle an incoming request.

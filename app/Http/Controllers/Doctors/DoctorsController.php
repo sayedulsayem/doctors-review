@@ -19,6 +19,10 @@ class DoctorsController extends Controller
         return view('front.doctors.sign-up');
     }
 
+    public function completeProfileView(){
+        return view('front.doctors.complete_profile');
+    }
+
     public function newSignUp(Request $request){
 
         //return $request;
@@ -36,7 +40,7 @@ class DoctorsController extends Controller
         Session::put('email',$data->email);
         Session::put('type',1);
 
-        return redirect('/doctors')->with('msg','Registration has been successfully.');
+        return redirect('/complete-profile')->with('msg','Registration has been successfully.');
     }
 
 }

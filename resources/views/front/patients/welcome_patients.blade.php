@@ -1,4 +1,4 @@
-@extends('front.doctors.master')
+@extends('front.patients.master')
 @section('body')
 
     <h4 class="text-success text-center">{{ Session::get('msg') }}</h4>
