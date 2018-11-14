@@ -19,26 +19,33 @@ class ValidationController extends Controller
 
     public function login(Request $request){
 
-        return "login function";
+        $userById= User::where('email',$request->email)->first();
 
-        $userById= User::where('email',$request->email)->first;
+        if (isset($userById)){
 
-        return $userById;
+            if ($userById->password == $request->password){
 
-//        if ($userById->password == $request->password){
-//
-//            Session::put('id',$userById->id);
-//            Session::put('name',$userById->name);
-//            Session::put('email',$userById->email);
-//            Session::put('type',$userById->type);
-//
-//            if ($userById->type == 1){
-//                return redirect('doctors');
-//            }
-//            elseif($userById->type == 2){
-//                return redirect('patients');
-//            }
-//        }
+                Session::put('id',$userById->id);
+                Session::put('name',$userById->name);
+                Session::put('email',$userById->email);
+                Session::put('type',$userById->type);
+
+                if ($userById->type == 1){
+                    //return $userById;
+                    return redirect('/doctors');
+                }
+                elseif($userById->type == 2){
+                    //return $userById;
+                    return redirect('/patients');
+                }
+            }
+            else{
+                return redirect('/login')->with('msg','Email Password doesn\'t match');
+            }
+        }
+        else{
+            return redirect('/sign-up')->with('msg','User not found by this email');
+        }
 
     }
 

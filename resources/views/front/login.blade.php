@@ -19,8 +19,10 @@
                 <div class="form-content">
                     <div class="form-items">
                         <h3 class="login-font text-center text-success">Login</h3>
+                        <h4 class="text-danger text-center">{{ Session::get('msg') }}</h4>
                         <hr/>
                         <form action="{{ url('login-verify') }}" method="post">
+                            @csrf
                             <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
                             <input class="form-control" type="password" name="password" placeholder="Password" required>
                             <a href="forget_password.html" class="">forgot password</a>
