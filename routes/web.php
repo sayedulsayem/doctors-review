@@ -25,8 +25,8 @@ Route::get('/',[
 Route::get('/sign-up','SignUpController@showSignUpPage');
 Route::get('/login','SignUpController@login');
 
-Route::get('/patients','Patients\PatientsController@home');
-Route::get('/patients/sign-up','Patients\PatientsController@signUp');
+Route::get('/patients','Patient\PatientsController@home');
+Route::get('/patients/sign-up','Patient\PatientsController@signUp');
 
 Route::get('/doctors','Doctors\DoctorsController@home');
 Route::get('/doctors/sign-up','Doctors\DoctorsController@signUp');

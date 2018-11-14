@@ -5,13 +5,13 @@ namespace App;
 use Session;
 use Illuminate\Database\Eloquent\Model;
 
-class Patients extends Model
+class Patient extends Model
 {
     protected $fillable = ['nid','name','email','address','date','mobile','password'];
 
     public static function savePatientInfo($request){
 
-        $patient = new Patients();
+        $patient = new Patient();
 
         $patient->nid = $request->nid;
         $patient->name = $request->name;

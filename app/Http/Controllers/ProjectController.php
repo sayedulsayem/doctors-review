@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Patients;
+use App\Patient;
 use Illuminate\Http\Request;
 use Session;
 
@@ -15,7 +15,7 @@ class ProjectController extends Controller
     public function getUserData(){
         $id=session::get('visitorId');
 
-        $userInfo= Patients::find($id);
+        $userInfo= Patient::find($id);
         return view('front.home.profile',[
             'userInfo' => $userInfo
         ]);
