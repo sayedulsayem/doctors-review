@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDrtagsTable extends Migration
+class CreateDrspecilitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateDrtagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('drtags', function (Blueprint $table) {
+        Schema::create('drspecilities', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('specialities')->nullable();
-            $table->string('chamber')->nullable();
-            $table->date('available_schedule_d')->nullable();
-            $table->time('available_schedule_t')->nullable();
+            $table->integer('user_id');
+            $table->string('name');
+            $table->string('explanation');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateDrtagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('drtags');
+        Schema::dropIfExists('drspecilities');
     }
 }

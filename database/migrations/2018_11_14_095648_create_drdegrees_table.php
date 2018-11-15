@@ -15,10 +15,11 @@ class CreateDrdegreesTable extends Migration
     {
         Schema::create('drdegrees', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
             $table->string('name');
             $table->string('license')->nullable()->unique();
             $table->string('institute');
-            $table->date('date_of_passing');
+            $table->year('year_of_passing');
             $table->timestamps();
         });
     }

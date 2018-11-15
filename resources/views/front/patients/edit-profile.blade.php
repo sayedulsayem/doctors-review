@@ -1,0 +1,1 @@
+<h1>{{ Session::get('msg') }}</h1>

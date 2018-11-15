@@ -18,6 +18,10 @@ class PatientsController extends Controller
         return view('front.patients.sign-up');
     }
 
+    public function editProfileView(){
+        return view('front.patients.edit-profile');
+    }
+
     public function newSignUp(Request $request){
 
         $data=new User();
@@ -33,6 +37,6 @@ class PatientsController extends Controller
         Session::put('email',$data->email);
         Session::put('type',2);
 
-        return redirect('/patients')->with('msg','Registration has been successfully.');
+        return redirect('/patients/edit-profile')->with('msg','Registration has been successfully.');
     }
 }

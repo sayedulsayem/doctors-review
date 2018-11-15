@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Drtag extends Model
+class Drschedule extends Model
 {
     //
 }
