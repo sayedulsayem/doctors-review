@@ -254,7 +254,7 @@
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="{{ asset('/') }}panels/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                            <span class="hidden-xs">{{ Session::get('doctor_name') }}</span>
+                            <span class="hidden-xs">{{ Session::get('name') }}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
@@ -509,7 +509,7 @@
         <div class="pull-right hidden-xs">
             <b>Version</b> 2.4.0
         </div>
-        <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+        <strong>Copyright &copy; 2014-2018 <a href="#">EU Thesis Team</a>.</strong> All rights
         reserved.
     </footer>
 

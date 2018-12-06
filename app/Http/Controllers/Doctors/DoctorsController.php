@@ -48,6 +48,8 @@ class DoctorsController extends Controller
 
     public function editProfileStore(Request $request){
 
+        //return $request;
+
         $doctor=new Doctor();
         $degree=new Drdegree();
         $specility=new Drspecility();
@@ -67,8 +69,38 @@ class DoctorsController extends Controller
         $degree->name=$request->MBBS;
         $degree->license=$request->license;
         $degree->institute=$request->institute;
-        $degree->date_of_passing=$request->passing_year;
+        $degree->year_of_passing=$request->passing_year;
         $degree->save();
+
+        $degree->user_id=$request->user_id;
+        $degree->name=$request->BMBS;
+        $degree->institute=$request->BMBS_institute;
+        $degree->year_of_passing=$request->BMBS_passing_year;
+        $degree->save();
+
+        $degree->user_id=$request->user_id;
+        $degree->name=$request->MBChB;
+        $degree->institute=$request->MBChB_institute;
+        $degree->year_of_passing=$request->MBChB_passing_year;
+        $degree->save();
+
+        $degree->user_id=$request->user_id;
+        $degree->name=$request->MBBCh;
+        $degree->institute=$request->MBBCh_institute;
+        $degree->year_of_passing=$request->MBBCh_passing_year;
+        $degree->save();
+
+        $specility->user_id=$request->user_id;
+        $specility->name=$request->speciality;
+        $specility->explanation=$request->sp_explanation;
+        $specility->save();
+
+        $schedule->user_id=$request->user_id;
+        $schedule->chamber=$request->private_chamber;
+        $schedule->available_schedule_d=$request->private_schedules_date;
+        $schedule->available_schedule_t=$request->private_schedules_time;
+        $schedule->save();
+
 
         return 'saved in db';
 

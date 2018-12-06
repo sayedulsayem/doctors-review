@@ -28,11 +28,11 @@
                             @csrf
                             <div class="box-body">
                                 <div class="form-group">
-                                    <input type="user_id" class="form-control hidden" name="user_id" value="{{ Session::get('id') }}">
+                                    <input type="number" class="form-control hidden" name="user_id" value="{{ Session::get('id') }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="nid">National Identity Number</label>
-                                    <input type="nid" class="form-control" name="nid" id="nid" placeholder="National Identity Number">
+                                    <input type="number" class="form-control" name="nid" id="nid" placeholder="National Identity Number">
                                 </div>
 
                                 <div class="form-group">
@@ -82,7 +82,7 @@
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="MBChB"><span>MBChB</span>
+                                        <input type="checkbox" name="MBChB" value="MBChB"><span>MBChB</span>
                                     </label>
                                     <label for="">Institute Name</label>
                                     <input class="text" name="MBChB_institute">
@@ -91,7 +91,7 @@
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="MBBCh"><span>MBBCh</span>
+                                        <input type="checkbox" name="MBBCh" value="MBBCh"><span>MBBCh</span>
                                     </label>
                                     <label for="">Institute Name</label>
                                     <input class="text" name="MBBCh_institute">
@@ -118,8 +118,11 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <label for="">Private Practise chamber</label>
+                                    <input type="name" class="form-group" name="private_chamber" id="private_chamber">
+                                    <br>
                                     <label for="">Private Practise Schedules Date</label>
-                                    <input type="date" class="form-group" name="private_schedules" id="private_schedules">
+                                    <input type="date" class="form-group" name="private_schedules_date" id="private_schedules">
                                     <label for="">Private Practise Schedules Time</label>
                                     <input type="time" class="form-group" name="private_schedules_time" id="private_schedules_time">
                                     <button>Add New</button>

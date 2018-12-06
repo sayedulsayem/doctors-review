@@ -33,6 +33,8 @@ Route::get('/patients/sign-up','Patients\PatientsController@signUp');
 Route::post('/patients/patient-sign-up','Patients\PatientsController@newSignUp');
 Route::get('/patients/edit-profile','Patients\PatientsController@editProfileView');
 
+Route::post('/patients/edit-store','Patients\PatientsController@editProfileStore');
+
 Route::group(['middleware' => 'login_validation_pt'], function (){
     Route::get('/patients','Patients\PatientsController@home');
 });
