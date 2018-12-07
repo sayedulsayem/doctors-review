@@ -65,30 +65,41 @@ class DoctorsController extends Controller
         $doctor->explanation=$request->practise_area_explanation;
         $doctor->save();
 
-        $degree->user_id=$request->user_id;
-        $degree->name=$request->MBBS;
-        $degree->license=$request->license;
-        $degree->institute=$request->institute;
-        $degree->year_of_passing=$request->passing_year;
-        $degree->save();
+        if (isset($request->MBBS)){
+            $degree=new Drdegree();
+            $degree->user_id=$request->user_id;
+            $degree->name=$request->MBBS;
+            $degree->license=$request->license;
+            $degree->institute=$request->institute;
+            $degree->year_of_passing=$request->passing_year;
+            $degree->save();
+        }
 
-        $degree->user_id=$request->user_id;
-        $degree->name=$request->BMBS;
-        $degree->institute=$request->BMBS_institute;
-        $degree->year_of_passing=$request->BMBS_passing_year;
-        $degree->save();
+        if (isset($request->BMBS)){
+            $degree=new Drdegree();
+            $degree->user_id=$request->user_id;
+            $degree->name=$request->BMBS;
+            $degree->institute=$request->BMBS_institute;
+            $degree->year_of_passing=$request->BMBS_passing_year;
+            $degree->save();
+        }
 
-        $degree->user_id=$request->user_id;
-        $degree->name=$request->MBChB;
-        $degree->institute=$request->MBChB_institute;
-        $degree->year_of_passing=$request->MBChB_passing_year;
-        $degree->save();
+        if (isset($request->MBChB)){
+            $degree->user_id=$request->user_id;
+            $degree->name=$request->MBChB;
+            $degree->institute=$request->MBChB_institute;
+            $degree->year_of_passing=$request->MBChB_passing_year;
+            $degree->save();
+        }
 
-        $degree->user_id=$request->user_id;
-        $degree->name=$request->MBBCh;
-        $degree->institute=$request->MBBCh_institute;
-        $degree->year_of_passing=$request->MBBCh_passing_year;
-        $degree->save();
+        if (isset($request->MBBCh)){
+            $degree=new Drdegree();
+            $degree->user_id=$request->user_id;
+            $degree->name=$request->MBBCh;
+            $degree->institute=$request->MBBCh_institute;
+            $degree->year_of_passing=$request->MBBCh_passing_year;
+            $degree->save();
+        }
 
         $specility->user_id=$request->user_id;
         $specility->name=$request->speciality;
