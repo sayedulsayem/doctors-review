@@ -30,6 +30,9 @@
     <!-- Google Font -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css' />
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -330,30 +333,20 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">MAIN NAVIGATION</li>
-                <li class="active treeview menu-open">
-                    <a href="#">
-                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                <li class="treeview">
+                    <a href="{{ url('/doctors') }}">
+                        <i class="fa fa-dashboard"></i><span>Dashboard</span>
                     </a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{ url('/doctors') }}"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                    </ul>
                 </li>
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-files-o"></i>
-                        <span>Layout Options</span>
-                        <span class="pull-right-container">
-              <span class="label label-primary pull-right">4</span>
-            </span>
+                        <span>Practising Schedule</span>
+                        <span class="pull-right-container"></span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-                        <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-                        <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-                        <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+                        <li><a href="{{ url('/doctors/all-schedule/create') }}"><i class="fa fa-circle-o"></i>Add Schedule</a></li>
+                        <li><a href="{{ url('/doctors/all-schedule') }}"><i class="fa fa-circle-o"></i>All Schedule In Calendar</a></li>
                     </ul>
                 </li>
                 <li>
@@ -728,5 +721,9 @@
 <script src="{{ asset('/') }}panels/dist/js/pages/dashboard2.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('/') }}panels/dist/js/demo.js"></script>
+
+@yield('custom-js')
+
+
 </body>
 </html>
