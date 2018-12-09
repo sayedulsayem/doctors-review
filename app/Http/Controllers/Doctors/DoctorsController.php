@@ -106,14 +106,14 @@ class DoctorsController extends Controller
         $specility->explanation=$request->sp_explanation;
         $specility->save();
 
-        $schedule->user_id=$request->user_id;
-        $schedule->chamber=$request->private_chamber;
-        $schedule->available_schedule_d=$request->private_schedules_date;
-        $schedule->available_schedule_t=$request->private_schedules_time;
-        $schedule->save();
+//        $schedule->user_id=$request->user_id;
+//        $schedule->chamber=$request->private_chamber;
+//        $schedule->available_schedule_d=$request->private_schedules_date;
+//        $schedule->available_schedule_t=$request->private_schedules_time;
+//        $schedule->save();
 
 
-        return 'saved in db';
+        return redirect('/doctors')->with('msg','Your information has been updated.');
 
     }
 
