@@ -1,3 +1,4 @@
+
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
@@ -26,20 +27,20 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="treeview">
+            <li class=" {{ request()->is('doctors') ? ' active ' : '' }} ">
                 <a href="{{ url('/doctors') }}">
-                    <i class="fa fa-dashboard"></i><span>Dashboard</span>
+                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
             </li>
-            <li class="treeview">
+            <li class="treeview {{ request()->is('doctors/all-schedule*') ? ' active menu-open ' : '' }} ">
                 <a href="#">
                     <i class="fa fa-files-o"></i>
                     <span>Practicing Schedule</span>
                     <span class="pull-right-container"></span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('/doctors/all-schedule/create') }}"><i class="fa fa-circle-o"></i>Add Schedule</a></li>
-                    <li><a href="{{ url('/doctors/all-schedule') }}"><i class="fa fa-circle-o"></i>All Schedule In Calendar</a></li>
+                    <li class=" {{ request()->is('doctors/all-schedule/create') ? ' active ' : '' }} "><a href="{{ url('/doctors/all-schedule/create') }}"><i class="fa fa-circle-o"></i>Add Schedule</a></li>
+                    <li class=" {{ request()->is('doctors/all-schedule') ? ' active ' : '' }} "><a href="{{ url('/doctors/all-schedule') }}"><i class="fa fa-circle-o"></i>All Schedule In Calendar</a></li>
                 </ul>
             </li>
             <li>
