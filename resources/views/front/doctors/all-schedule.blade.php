@@ -39,22 +39,19 @@
         </section>
 
     </div>
-<<<<<<< HEAD
-=======
 
     <style>
         .cal-design{
-            color: whitesmoke;
-            background-color: #2e383c;
-        }
-
-        .cal-design:hover{
-            transition: 1s;
             color: #2e383c;
             background-color: grey;
         }
+
+        /*.cal-design:hover{*/
+            /*transition: 1s;*/
+            /*color: #2e383c;*/
+            /*background-color: #4381BD;*/
+        /*}*/
     </style>
->>>>>>> 83f4da159adade44a7ca3d1d9da6904da91c9b0b
 
 
     @endsection
