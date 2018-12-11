@@ -117,16 +117,16 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="">Private Practise chamber</label>
-                                    <input type="name" class="form-group" name="private_chamber" id="private_chamber">
-                                    <br>
-                                    <label for="">Private Practise Schedules Date</label>
-                                    <input type="date" class="form-group" name="private_schedules_date" id="private_schedules">
-                                    <label for="">Private Practise Schedules Time</label>
-                                    <input type="time" class="form-group" name="private_schedules_time" id="private_schedules_time">
-                                    <button>Add New</button>
-                                </div>
+                                {{--<div class="form-group">--}}
+                                    {{--<label for="">Private Practise chamber</label>--}}
+                                    {{--<input type="name" class="form-group" name="private_chamber" id="private_chamber">--}}
+                                    {{--<br>--}}
+                                    {{--<label for="">Private Practise Schedules Date</label>--}}
+                                    {{--<input type="date" class="form-group" name="private_schedules_date" id="private_schedules">--}}
+                                    {{--<label for="">Private Practise Schedules Time</label>--}}
+                                    {{--<input type="time" class="form-group" name="private_schedules_time" id="private_schedules_time">--}}
+                                    {{--<button>Add New</button>--}}
+                                {{--</div>--}}
 
                                 <div class="form-group">
                                     <label for="">Practising Area</label>

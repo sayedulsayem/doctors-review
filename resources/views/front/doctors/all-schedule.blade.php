@@ -38,7 +38,7 @@
             <!-- /.row -->
         </section>
 
-    </div>>
+    </div>
 
 
     @endsection
