@@ -17,7 +17,7 @@
         </section>
 
         <!-- Main content -->
-        <section class="content">
+        <section class="content" style="width: 800px;height: 500px;">
             <div class="row">
                 <!-- left column -->
                 <div class="col-md-12">
@@ -25,7 +25,7 @@
                     <div class="box box-primary">
                         <!-- /.box-header -->
                         <!-- calendar start -->
-                        <div id='calendar'></div>
+                        <div id='calendar' class="cal-design" style="font: bold 20px Nunito"></div>
 
                     </div>
                     <!-- /.box -->
@@ -38,7 +38,20 @@
             <!-- /.row -->
         </section>
 
-    </div>>
+    </div>
+
+    <style>
+        .cal-design{
+            color: whitesmoke;
+            background-color: #2e383c;
+        }
+
+        .cal-design:hover{
+            transition: 1s;
+            color: #2e383c;
+            background-color: grey;
+        }
+    </style>
 
 
     @endsection
