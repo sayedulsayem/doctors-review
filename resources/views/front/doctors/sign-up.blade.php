@@ -17,14 +17,11 @@
                     <div class="form-items">
                         <h3 class="login-font text-center text-success">Registration</h3>
                         <hr/>
-                        <form action="{{ route('new-visitor') }}" method="POST">
+                        <form action="{{ url('doctors/doctor-sign-up') }}" method="POST">
                             @csrf
-                            <input class="form-control" type="number" name="nid" placeholder="NID" required>
+
                             <input class="form-control" type="text" name="name" placeholder="Full Name" required>
                             <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
-                            <input class="form-control" type="text" name="address" placeholder="Address" >
-                            <input class="form-control" type="date" name="date" placeholder="Date of birth" required>
-                            <input class="form-control" type="number" name="mobile" placeholder="Mobile Number" required>
                             <input class="form-control" type="password" name="password" placeholder="Password" required>
                             <div class="form-button text-center">
                                 <button id="submit" type="submit" class="btn bg-success" value="Register">Register</button>
